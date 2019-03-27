@@ -17,7 +17,7 @@ Two Algorithms
   b. goodMole
     Generates a mole that is a good mole (+1 point if you click on it).
   c. badMole
-    Generates a mole that is bad (-1 point if yoou click on it).
+    Generates a mole that is bad (-1 point if you click on it).
     
     
     
