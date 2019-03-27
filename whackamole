@@ -1,0 +1,43 @@
+var x = 100;
+var y = 100;
+
+function setup() {
+  createCanvas(900, 900);
+  drawGrid();
+}
+
+function setupGame(){
+drawGrid();
+scoreAndTime();
+}
+
+function drawMoles(){
+moleClicked();
+goodMole();
+badMole();
+}
+
+function drawGrid(){
+  
+  while(x < width) {
+    line(x,0,x,600);
+    x = x + 200;
+  }
+    while(y < 600){
+    line(0,y,600,y);
+    y = y + 200;
+    }
+  
+}
+
+function scoreAndTime(){
+}
+
+function moleClicked(){
+}
+
+function goodMole(){
+}
+
+function badMole(){
+}
