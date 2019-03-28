@@ -1,8 +1,8 @@
-var x = 100;
-var y = 100;
+let x = 00;
+let y = 00;
 
 function setup() {
-  createCanvas(900, 900);
+  createCanvas(750, 750);
   drawGrid();
 }
 
@@ -19,15 +19,16 @@ badMole();
 
 function drawGrid(){
   
-  while(x < width) {
-    line(x,0,x,600);
-    x = x + 200;
+  while(x <= width) {
+    line(x,0,x,width);
+    x = x + width/3;
   }
-    while(y < 600){
-    line(0,y,600,y);
-    y = y + 200;
+    while(y <= height){
+    line(0,y,height,y);
+    y = y + height/3;
     }
-  
+  line(width-1,0,width-1,height);
+  line(0,height-1,width,height-1);
 }
 
 function scoreAndTime(){
