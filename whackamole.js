@@ -1,5 +1,5 @@
-let x = 00;
-let y = 00;
+let x = 0;
+let y = 0;
 let score = 0;
 
 function setup() {
