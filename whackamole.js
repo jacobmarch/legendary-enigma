@@ -1,5 +1,6 @@
 let x = 00;
 let y = 00;
+let score = 0;
 
 function setup() {
   createCanvas(750, 750);
