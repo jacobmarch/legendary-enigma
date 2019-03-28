@@ -1,15 +1,28 @@
-let x = 0;
-let y = 0;
+let x = 00;
+let y = 00;
 let score = 0;
+let gameStart = false;
 
 function setup() {
   createCanvas(750, 750);
   drawGrid();
 }
 
+function mousePressed(){
+if(gameStart === false){
+   gameStart = true; 
+}
+ if(gameStart === true){
+   gameStart = false; 
+  }
+}
+
 function setupGame(){
-drawGrid();
+
+  if (gameStart === true){
+    drawGrid();
 scoreAndTime();
+}
 }
 
 function drawMoles(){
