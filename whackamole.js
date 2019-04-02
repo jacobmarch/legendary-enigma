@@ -3,25 +3,43 @@ let y = 00;
 let score = 0;
 let goodMoleClicked;
 let badMoleClicked;
-let timer = 3;
+let timer = 5;
 
 function setup() {
   createCanvas(750, 750);
   
+  
+  
+
+}
+function draw(){
+ 
+  background(255);
   setupGame();
-
+  x = 0;
+  y = 0;
+if (frameCount % 60 == 0 && timer > 0) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
+    timer --;
+  
+  }
+  
+text("time: " + timer, width/2, height/2);
+  if (timer == 0) {
+    background(255);
+    text("GAME OVER", width/2, height*0.5);
+   
+  }
+  
 }
 
-function mousePressed(){
-
-}
 
 function setupGame(){
 
   
-    drawGrid();
+    
 scoreAndTime();
-
+  drawGrid();
+   
 }
 
 function drawMoles(){
@@ -57,12 +75,7 @@ function scoreAndTime(){
   }
   //prevents negative scores
   
-  if (frameCount % 60 == 0 && timer > 0) { // if the frameCount is divisible by 60, then a second has passed. it will stop at 0
-    timer --;
-  }
-  if (timer == 0) {
-    text("GAME OVER", width/2, height*0.7);
-  }
+ 
 }
 
 function moleClicked(){
