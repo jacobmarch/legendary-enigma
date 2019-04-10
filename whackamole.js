@@ -3,7 +3,7 @@ let y = 00;
 let score = 0;
 let goodMoleClicked;
 let badMoleClicked;
-let timer = 3;
+let timer = 15;
 let grid = [
   [1,2,3],
   [4,5,6],
@@ -28,7 +28,7 @@ function mousePressed(){
 function keyPressed(){
   if(timer == 0){
     if(keyCode == ENTER){
-      timer = 3;
+      timer = 15;
       score = 0;
     }
   }
@@ -58,9 +58,10 @@ if (frameCount % 60 == 0 && timer > 0) { // if the frameCount is divisible by 60
     background(255);
     fill(0,0,0);
     text("GAME OVER", width/2, height*0.5);
-    text("SCORE: " + score, width/2, height/2 + 32.5);
+    text("SCORE: " + score, width/2, height/2 + 37.5);
     text("HIGH SCORE: " + highScore, width/2, height/2 + 75);
-    gameValue = false;
+    text("PRESS ENTER TO RESTART", width/2, height/2 + 75 + 37.5);
+    
     if(score > highScore){
       highScore = score;
     }
@@ -69,8 +70,9 @@ if (frameCount % 60 == 0 && timer > 0) { // if the frameCount is divisible by 60
   goodMole();
   badMole();
     text("score: "  + score, width/2, height/2 + 75);
+    text("time: " + timer, width/2, height/2);
 }
-  text("time: " + timer, width/2, height/2);
+  
   
 }
 
