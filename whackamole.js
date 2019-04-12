@@ -19,10 +19,11 @@ let brandomy;
 let highScore = 0;
 let oldGMole;
 let oldBMole;
+let scoreLimiter = 0;
 
 function mousePressed(){
   moleClicked();
-  scoreTrack();
+  
 }
 
 function keyPressed(){
@@ -79,8 +80,11 @@ if (frameCount % 60 == 0 && timer > 0) { // if the frameCount is divisible by 60
 function setupGame(){
 
   
+  if(mouseIsPressed){
+    scoreTrack();
     
-
+  }
+  
   drawGrid();
    
 }
@@ -101,10 +105,14 @@ function drawGrid(){
 
 function scoreTrack(){
   if(gMole == boxClicked){
+    for(let i = 0; i < 1; i++){
     score = score + 1;
      }
+  }
   if(bMole == boxClicked){
+    for(let i = 0; i < 1; i++){
     score = score - 3;
+  }
   }
   //adjusts score based on what type of mole was clicked on
   if(score < 0){
@@ -114,7 +122,7 @@ function scoreTrack(){
   if (score > highScore){
     highscore = score;
   }
- 
+ boxClicked = 0;
 }
 
 function moleClicked(){
