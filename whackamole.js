@@ -70,6 +70,7 @@ if (frameCount % 60 == 0 && timer > 0) { // if the frameCount is divisible by 60
   if(timer != 0){
   goodMole();
   badMole();
+    fill(0,0,0);
     text("score: "  + score, width/2, height/2 + 75);
     text("time: " + timer, width/2, height/2);
 }
