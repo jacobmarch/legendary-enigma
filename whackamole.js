@@ -80,9 +80,13 @@ if (frameCount % 60 == 0 && timer > 0) { // if the frameCount is divisible by 60
 function setupGame(){
 
   
-  if(mouseIsPressed){
+  
+  if(timer != 0){
     scoreTrack();
-    
+  }
+  else{
+    gMole = 0;
+    bMole = 0;
   }
   
   drawGrid();
@@ -122,7 +126,7 @@ function scoreTrack(){
   if (score > highScore){
     highscore = score;
   }
- boxClicked = 0;
+ boxClicked= 0;
 }
 
 function moleClicked(){
