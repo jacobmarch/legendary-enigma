@@ -1,3 +1,5 @@
+//Our variables and setting up the code.
+
 let x = 00;
 let y = 00;
 let score = 0;
@@ -43,6 +45,7 @@ function setup() {
   brandomy = int(random(0,3));
 }
 
+//My code
 function draw(){
  
   background(255);
@@ -130,6 +133,7 @@ function scoreTrack(){
  boxClicked= 0;
 }
 
+//Partner's Code
 function moleClicked(){
   for(i = 0; i < 3; i++){
     for(j = 0; j < 3; j++){
